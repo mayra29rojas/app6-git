@@ -1,0 +1,428 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>sexta Aplicacion</title>
+
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/tema-app6.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/> 
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('imagenes/gama-baja2.jpg','imagenes/gama-media2.jpg','imagenes/celufutu4.jpg','imagenes/historia1.jpg','imagenes/conciencia1.jpg','imagenes/greenpeace1.jpg','imagenes/pnuma1.jpg','imagenes/batalla1.jpg','imagenes/tripartita.jpg','imagenes/conde.jpg')">
+
+
+<div data-role="page" id="Principal" data-theme="b">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>BATALLA DE PUEBLA</h1>
+</div>
+<div data-role="main" class="ui-content"></div>
+<div>
+<ul data-role="listview" data-theme="a" class="ui-listview ui-group-theme-b">
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r"> 
+<h2>Batalla del 4 de mayo</h2>
+<p>Se muestra información de la batalla.</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r"> 
+<h2>Batalla del 5 de mayo</h2>
+<p>Se muestra información de la batalla.</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Inicio del conflicto</h2>
+<P>Muestra los antecedentes.</P>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Monumentos de la batalla.</h2>
+<p>Muestra algunos monumentos del suceso.</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r"> 
+<h2>Museos que existen sobre el tema.</h2>
+<p>Muestra algunos museos.</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Héroes de la batalla</h2>
+<p>Muestra el nombre de los héroes.</p>
+</a>
+</li>
+</ul>
+</div>
+<div data-role="footer" align="center" data-theme="b" data-position="fixed">
+<div>
+<img src="imagenes/mdpi.png" width="46" heigth="46">
+</div>
+<div>
+<h4>Aplicación seis</h4>
+<h4>Mayra Edith Rojas Barboza</h4>
+  </div>
+ </div>
+</div>
+<div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="b">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>BATALLA DE ATLIXCO</h1>
+</div>
+<div data-role="content" align="left">
+<div>
+<h2>La Batalla de Atlixco tuvo lugar el 4 de mayo de 1862 en las inmediaciones de la Hacienda de las Traperas en Atlixco en el estado de Puebla, México, entre elementos del ejército mexicano de la república, al mando de los generales Antonio Carvajal y Tomás O'Horan contra las tropas al servicio del Segundo Imperio Mexicano comandadas por el general José María Cobos y de Leonardo Márquez, compuesta de soldados conservadores mexicanos en apoyo de envío de refuerzos para llevar a cabo la Batalla de Puebla, durante la Segunda Intervención Francesa en México.
+<p>
+Esta batalla culminó con una victoria republicana y debido a esto el grupo conservador de Márquez no pudo lograr su objetivo de auxiliar a las tropas francesas del Conde de Lorencez en la batalla de Puebla.</h2>
+<div data-role="main" class="ui-content">
+  <div data-role="collapsible" data-content-theme="false">
+   <h1>General Tomás O'Horan</h1>
+    <div>
+      <br>
+</div>
+<div>
+     <img src="imagenes/antonio.jpg" width="22%" height="22%">
+    </div>
+    </div>
+    </div>
+    
+    <div data-role="main" class="ui-content">
+  <div data-role="collapsible" data-content-theme="false">
+   <h1>General José María Cobos</h1>
+    <div>
+      <br>
+</div>
+<div>
+     <img src="imagenes/maria_cobos.jpg" width="20%" height="20%">
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+<div data-role="footer" data-theme="b" data-position="fixed">
+<h4>Aplicación seis,MERB</h4>
+</div>
+</div>
+
+
+<div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="b">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>BATALLA 5 DE MAYO</h1>
+</div>
+<div data-role="content" align="left">
+<div>
+<h2>Antes del 5 de Mayo, el día  28 de abril de 1862, tuvo lugar un enfrentamiento conocido como la Batalla de las Cumbres entre el Ejército Expedicionario Francés y el Ejército Mexicano. En este conflicto hubo cerca de 500 bajas francesas en contra de apenas 50 bajas mexicanas.</h2>
+</div>
+<div>
+<ul>
+<li>El 5 de mayo, a las 9 de la manana, aparecen los franceses en el horizonte, pero es hasta las 11 de la manana cuando comienzan las hostilidades, anunciándose con un cañonazo desde el Fuerte de Guadalupe y acompañado por los repiques de las campanas de la ciudad.</li>
+<li>El conde de Lorencez ordena una maniobra sorpresiva que divide a la columna francesa en dos; eran 4,000 hombres marchando para atacar los Fuertes de Loreto y Guadalupe.</li>
+<li>El 6o. Batallón de la Guardia Nacional del Estado de Puebla, bajo el mando del coronel Juan Nepomuceno Méndez, fue el primer cuerpo del Ejército de Oriente en hacer frente a los franceses y  rechazar el  ataque.</li>
+<li>Varios embates franceses fueron repelidos por la resistencia del Ejército Mexicano como es el caso de los zuavos (originarios de Argelia), el regimiento de élite de la infantería francesa, quienes iniciaron un cauteloso ascenso hacia el Fuerte de Guadalupe, pero fueron recibidos con bayonetas y obligados lo franceses a retroceder.</li>
+
+</ul>
+
+<br>
+<p align="center"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('batalla','','imagenes/batalla1.jpg',1)"><img src="imagenes/batalla.jpg" width="255" height="149" id="batalla"></a>
+</div>
+</div>
+<div data-role="footer" data-theme="b" data-position="fixed">
+<h4>Aplicación seis,MERB</h4>
+</div>
+</div>
+
+
+<div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="b">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>ANTECEDENTES DEL CONFLICTO</h1>
+  </div>
+   <div data-role="content" align="left">
+    <div>
+  <h2>En octubre de 1861, Francia, Inglaterra y España suscribieron la Convención de Londres, en la cual se comprometieron a enviar contingentes militares a México ya que este tenía una gran deuda de 80 millones de pesos, aproximadamente eran 69 millones para los ingleses, 9 millones para los españoles y 2 millones para Francia.
+<P>
+La alianza tripartita amenazó al presidente Benito Juarez con una invasión inminente si no se saldaba por completo las deudas que México tenía con los tres países europeos.
+<P>
+Juarez responde con un exhorto para  lograr un arreglo amistoso, y los invitó a conferenciar. Sin embargo, sabía que había una guerra inminente y trató de proteger la Ciudad de México trasladando pertrechos y  ordenó la fortificación de Puebla. Creo al Ejército de Oriente y el hombre que se designó en el mando fue el general Ignacio Zaragoza.</h2>
+<br>
+<p align="center"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('antecedentes','','imagenes/tripartita.jpg',1)"><img src="imagenes/antecedente.jpg" width="336" height="190" id="antecedentes"></a>
+<br>
+<h2>En un principio la Alianza Tripartita aceptó el llamado al diálogo de Benito Juarez y sus representantes se reunieron con Manuel Doblado, ministro de Relaciones Exteriores del gobierno mexicano, quien consiguió que Juan Prim, representante español, y Lord John Russell por Inglaterra se retiraran. A este acuerdo se le conoce como los Tratados Preliminares de la Soledad.
+<P>
+El 5 de marzo, cuando aún se realizaban las negociaciones de los Tratados de la Soledad, llegó a Veracruz un contingente militar francés bajo el mando de Charles Ferdinand Latrille, conde de Lorencez. A finales de abril, Lorencez desconoció los Tratados de Soledad y se puso en marcha, junto con sus efectivos, hacia Puebla, con el fin último de conquistar la Ciudad de México.</h2>
+
+<br>
+<p align="center"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('condes','','imagenes/conde.jpg',1)"><img src="imagenes/tratados.JPG" width="233" height="272" id="condes"></a>
+</div>
+  </div>
+    <div data-role="footer" data-theme="b" data-position="fixed">
+    <h4>Aplicación seis,MERB</h4>
+    </div>
+</div>
+    
+    
+<div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="b">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+     <h1>MONUMENTOS</h1>
+    </div>
+    <div data-role="content" align="left">
+    <div>
+    <ul>
+<li>Monumento a los Caídos en la Batalla del 5 de Mayo.</li>
+<div data-role="main" class="ui-content">
+  <div data-role="collapsible" data-content-theme="false">
+   <h1>Batalla 5 de mayo</h1>
+    <div>
+      <br>
+</div>
+<div>
+     <img src="imagenes/caidos.jpg" width="20%" height="20%">
+    </div>
+    </div>
+    </div>
+<li>Monumento “De la Vela Votiva” se conmemora el centenario de la Batalla del 5 de mayo, Puebla.</li>
+<div data-role="main" class="ui-content">
+  <div data-role="collapsible" data-content-theme="false">
+   <h1>Batalla 5 de mayo</h1>
+    <div>
+      <br>
+</div>
+<div>
+     <img src="imagenes/velavotiva.jpg" width="20%" height="20%">
+    </div>
+    </div>
+    </div>
+<li>Bandera Mexicana con los bustos de esos grandes heroes que defendieron nuestra soberania nacional </li>
+<div data-role="main" class="ui-content">
+  <div data-role="collapsible" data-content-theme="false">
+   <h1>Batalla 5 de mayo</h1>
+    <div>
+      <br>
+</div>
+<div>
+     <img src="imagenes/bandera.jpg" width="20%" height="20%">
+    </div>
+    </div>
+    </div>
+
+<li>Monumento a Ignacio Zaragoza</li>
+<div data-role="main" class="ui-content">
+  <div data-role="collapsible" data-content-theme="false">
+   <h1>Batalla 5 de mayo</h1>
+    <div>
+      <br>
+</div>
+<div>
+     <img src="imagenes/zaragoza.jpg" width="20%" height="20%">
+    </div>
+    </div>
+    </div>
+    
+    <li>Fuerte de Loreto unos de los monumentos más importantes de los poblanos y los mexicanos, donde se desarrolló la batalla del 5 de mayo.</li>
+<div data-role="main" class="ui-content">
+  <div data-role="collapsible" data-content-theme="false">
+   <h1>Batalla 5 de mayo</h1>
+    <div>
+      <br>
+</div>
+<div>
+     <img src="imagenes/fuertesloreto.jpg" width="20%" height="20%">
+    </div>
+    </div>
+    </div>
+</ul>
+  </div>
+</div>
+ <div data-role="main" class="ui-content" align="center">
+  <div style="width:40%;">
+    <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+    <li class="ui-first-child ui-last-child">
+   <a href="http://www.archdaily.mx/mx/02-217021/monumento-emblematico-del-150-aniversario-de-la-batalla-de-puebla-ten-arquitectos" target="_self"  id="beep" data-role="button">
+   <h2>Monumento Emblemático</h2>
+    </a>
+   </li>
+  </ul>
+ </div>
+</div>
+
+ <div data-role="main" class="ui-content" align="center">
+  <div style="width:40%;">
+    <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+    <li class="ui-first-child ui-last-child">
+   <a href="https://www.yelp.com.mx/biz/monumento-a-la-victoria-5-de-mayo-puebla" target="_self"  id="beep" data-role="button">
+   <h2>Monumento a la victoria</h2>
+    </a>
+   </li>
+  </ul>
+ </div>
+</div>
+
+<div data-role="footer" data-theme="b" data-position="fixed">
+   <h4>Aplicacion seis,MERB</h4>
+</div>
+</div>
+   
+   
+<div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="b">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+   <h1>MUSEOS</h1>
+    </div>
+    <div data-role="content" align="left">
+     <div>
+<h2>MUSEO INTERACTIVO DE LA BATALLA DEL 5 DE MAYO</h2>
+<br>
+
+<h2>Espacio interactivo donde las familias puedan conocer de manera divertida los pasajes de los hechos desarrollados en la zona de Los Fuertes.</h2>
+<br>
+    <div data-role="main" class="ui-content" align="center">
+  <div style="width:40%;">
+    <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+    <li class="ui-first-child ui-last-child">
+   <a href="http://sic.gob.mx/ficha.php?table=museo&table_id=978" target="_self"  id="beep" data-role="button">
+   <h2>Museo interactivo</h2>
+    </a>
+   </li>
+  </ul>
+ </div>
+</div> 
+<br>
+<h2>MUSEO NACIONAL DE LAS INTERVENCIONES</h2>
+<br>
+<h2>El Museo Nacional de las Intervenciones se ubica en un antiguo convento que los franciscanos cedieron a la orden de los dieguinos en 1580, los cuales establecieron allí su noviciado y el colegio de formación de misioneros que evangelizaron Filipinas, China y Japón.
+</h2>
+<br>
+<div data-role="main" class="ui-content" align="center">
+  <div style="width:40%;">
+    <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+    <li class="ui-first-child ui-last-child">
+   <a href="https://centrodecoyoacan.mx/donde-ir/museos/museo-de-las-intervenciones" target="_self"  id="beep" data-role="button">
+    <h2>Museo nacional de las intervenciones</h2>
+    </a>
+   </li>
+  </ul>
+ </div>
+</div> 
+
+
+     </div>
+  </div>
+      <div data-role="footer" data-theme="b" data-position="fixed">
+      <h4>Aplicacion seis,MERB</h4>
+      </div>
+</div>
+      
+
+
+<div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="b">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>NIÑOS HÉROES</h1>
+    </div>
+     <div data-role="content" align="left">
+  <div>
+  
+ 
+  <!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+  <li><img src="data1/images/caida.jpg" alt="caida" title="caida" id="wows1_1"/></li>
+		<li><img src="data1/images/fernando.jpg" alt="fernando" title="fernando" id="wows1_2"/></li>
+		<li><img src="data1/images/fran_marquez.jpg" alt="fran_marquez" title="fran_marquez" id="wows1_3"/></li>
+		<li><img src="data1/images/juan.jpg" alt="juan" title="juan" id="wows1_4"/></li>
+		<li><img src="data1/images/juanescutia.jpg" alt="juanescutia" title="juanescutia" id="wows1_5"/></li>
+		<li><a href="http://wowslider.com"><img src="data1/images/melgar.jpg" alt="wowslider.com" title="melgar" id="wows1_6"/></a></li>
+		<li><img src="data1/images/vicente.jpg" alt="Vicente" title="Vicente" id="wows1_7"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="batalla_zaragoza"><span><img src="data1/tooltips/batalla_zaragoza.jpg" alt="batalla_zaragoza"/>1</span></a>
+		<a href="#" title="caida"><span><img src="data1/tooltips/caida.jpg" alt="caida"/>2</span></a>
+		<a href="#" title="fernando"><span><img src="data1/tooltips/fernando.jpg" alt="fernando"/>3</span></a>
+		<a href="#" title="fran_marquez"><span><img src="data1/tooltips/fran_marquez.jpg" alt="fran_marquez"/>4</span></a>
+		<a href="#" title="juan"><span><img src="data1/tooltips/juan.jpg" alt="juan"/>5</span></a>
+		<a href="#" title="juanescutia"><span><img src="data1/tooltips/juanescutia.jpg" alt="juanescutia"/>6</span></a>
+		<a href="#" title="melgar"><span><img src="data1/tooltips/melgar.jpg" alt="melgar"/>7</span></a>
+		<a href="#" title="Vicente"><span><img src="data1/tooltips/vicente.jpg" alt="Vicente"/>8</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">wowslider.net</a> by WOWSlider.com v8.7</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+    <dv>
+      <dv>
+<h2>NIÑOS HÉROES:</h2>
+ <ul>
+<li>El cadete Fernando Montes de Oca (Edad al morir 18 años con 4 meses).
+<p>
+Murió en el marco de una puerta la cual defendía, en la cual cayó cuando un soldado estadounidense logró pasar por una ventana y matarle por la espalda.</li>
+<li>El cadete Francisco Márquez (Edad al morir 12 años con 11 meses).
+<p>
+Murió en el castillo cuando un grupo de soldados se le acercó conminándolo a rendirse pero él disparó a uno, a quien mató para luego ser asesinado por los tiros de otros.</li>
+<li>El teniente del Cuerpo de Ingenieros Juan de la Barrera (Edad al morir 19 años con 3 meses).
+<p>
+Murió en la defensa del hornabeque ubicado al sur del cerro, en donde luego fueron encontrados seis cadáveres que fueron identificados como los Niños Héroes.</li>
+<li>Juan Escutia (Edad al morir 20 años y medio).
+<p>
+Murió en la ladera poniente del cerro, ubicado como tirador en lo alto del acantilado, donde fue herido por una bala y cayó, quedando sobre una roca, a la cual le fue colocada una placa conmemorativa en 1970.</li>
+<li>El cadete Vicente Suárez (Edad al morir 14 años con 5 meses).
+<p>
+Murió en su puesto de centinela en la escalera de honor peleando a bayoneta contra los estadounidenses.</li>
+<li>El cadete agregado Agustín Melgar (Edad al morir casi 18).
+<p>
+Murió al día siguiente. Este se había parapetado detrás de unos colchones en el dormitorio del colegio donde, acabado su parque, dispuso su bayoneta en el fusil y se lanzó a la lucha cuerpo a cuerpo, de donde resultó herido de varios disparos y bayonetas.</li>
+</ul>
+    </div>
+</div>
+
+<div data-role="main" class="ui-content" align="center">
+  <div style="width:40%;">
+    <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+    <li class="ui-first-child ui-last-child">
+   <a href="http://wikipuebla.poblanerias.com/miguel-negrete-heroe-poblano-de-la-batalla-del-cinco-de-mayo/" target="_self"  id="beep" data-role="button">
+   <h2>Héroes de la batalla</h2>
+    </a>
+   </li>
+  </ul>
+ </div>
+</div> 
+<div data-role="footer" data-theme="b" data-position="fixed">
+   <h4>Aplicacion seis,MERB</h4>
+</div>
+   </div>
+      
+</body>
+</html>
+
